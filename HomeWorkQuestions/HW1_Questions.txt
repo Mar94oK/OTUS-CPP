@@ -1,0 +1,33 @@
+1) После сборки посредством GitActions мой пакет перестал запускаться, т.к. ему нужна более свежая версия GLIBC.
+ipFilter: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.29' not found (required by ipFilter)
+(У меня относительно древняя Ubuntu 18.04 LTS)
+
+Согласно 
+https://stackoverflow.com/questions/57476533/why-is-statically-linking-glibc-discouraged
+
+Линковать статически весьма не рекомендуют) Есть ли какой-то обещпринятый способ борьбы с этой неприятностью?
+
+2) Как в следующей конструкции добавить ограничение при инстанцировании для значений параметров используя с++14 (как указано в задании для ДЗ1)?
+И можно ли это сделать, не используя static_assert (как указано здесь)?
+https://stackoverflow.com/questions/18981752/c-compile-time-check-function-arguments
+	
+	template <typename ... uint8_t, std::enable_if_t<((sizeof...(uint8_t) < 5) && (sizeof...(uint8_t) > 0)), bool> = true>
+	bool FilterByOctetsRangeBaseLoop ( const uint8_t... octets)
+	{
+		uint32_t octetID = 0;
+		for(const auto it : {octets...})
+		{
+			if (it != _decimalOctetsRepresentation[octetID++])
+				return false;
+		}
+		return true;
+	}
+
+3) Правильно ли я понимаю, что для подобных конструкций лучше использовать инициализацию с помощью std::initializer_list?
+
+т.е. auto myResult = filter({1,2}); и т.п.? 
+И в таком случае удастся избежать VariadicTemplates с рекурсией?
+Как, например, говорят здесь.
+https://www.experts-exchange.com/articles/32502/None-recursive-variadic-templates-with-std-initializer-list.html
+
+
