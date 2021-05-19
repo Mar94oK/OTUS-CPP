@@ -1,3 +1,6 @@
 [submodule "otuscpp-hw-1"]
 	path = otuscpp-hw-1
 	url = https://github.com/Mar94oK/otuscpp-hw-1.git
+[submodule "otuscpp-hw-1-ipfilter"]
+	path = otuscpp-hw-1-ipfilter
+	url = git@github.com:Mar94oK/otuscpp-hw-1-ipfilter.git
