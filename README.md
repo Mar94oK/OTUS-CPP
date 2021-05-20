@@ -32,8 +32,10 @@ sudo apt-get install helloworld
 
 sudo apt-get install ipfilter
 
-Can start build manualy
+Can start build manualy:
+
 https://github.com/Mar94oK/otuscpp-hw-1/actions/workflows/cmake.yml
+
 https://github.com/Mar94oK/otuscpp-hw-1-ipfilter/actions/workflows/c-cpp.yml
 
 DebPackages Repo:
