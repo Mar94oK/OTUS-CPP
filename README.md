@@ -27,7 +27,9 @@ sudo curl -s --compressed -o /etc/apt/sources.list.d/my_list_file.list "https://
 curl -s --compressed "https://mar94ok.github.io/BionicAptPackagesRepo/KEY.gpg" | sudo apt-key add -
 
 sudo apt-get update
+
 sudo apt-get install helloworld
+
 sudo apt-get install ipfilter
 
 Can start build manualy
