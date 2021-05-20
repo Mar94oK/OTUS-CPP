@@ -42,4 +42,6 @@ DebPackages Repo:
 --
 https://github.com/Mar94oK/BionicAptPackagesRepo
 
-
+My Questions:
+--
+https://github.com/Mar94oK/OTUS-CPP/blob/main/HomeWorkQuestions/HW1_Questions.txt
